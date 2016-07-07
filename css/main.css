@@ -1,0 +1,29 @@
+.denver {
+  text-align: center;
+  font-family: Source Sans Pro; }
+
+table {
+  text-align: right;
+  margin: auto;
+  font-family: Source Sans Pro;
+  font-size: 18px; }
+
+th {
+  text-align: right; }
+
+.product {
+  text-align: left; }
+
+img {
+  height: 20px;
+  width: 20px; }
+
+label {
+  display: block; }
+
+form {
+  margin: auto;
+  text-align: center; }
+
+input.ng-invalid {
+  background-color: red; }
