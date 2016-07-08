@@ -23,8 +23,8 @@
             <ul class='items' ng-repeat='toDo in main.data'>
                 <!-- example of existing item (incomplete)-->
                 <li>
-                    <article>
-                        <button ng-click="main.checkOff(toDo)" class='check'></button>
+                    <article ng-class="{completed: toDo.isComplete}">
+                        <button ng-click="main.checkOff(toDo)" class='check' ng-model="toDo.completed"></button>
                         <p>{{toDo.item}}</p>     
                         <button ng-click="main.deleteItem(toDo)" class='delete'>X</button>
                     </article>

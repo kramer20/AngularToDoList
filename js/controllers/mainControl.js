@@ -10,7 +10,7 @@
         vm.data = [];
         //on submit, item gets pushed up to list
         vm.submit = function(){
-            var newObj = {"item" : vm.form.item};
+            var newObj = {"item" : vm.form.item, "isComplete" : false};
                 vm.data.push(newObj);
             //automatically clears input when new item is pushed up    
             vm.form = [];
@@ -22,11 +22,17 @@
             vm.data.splice(index, 1);
             }
         
-        vm.checkOff = function(item) { console.log(item);
-            //vm.check = false;  
-            if(vm.data === false) {
-                vm.data = true; 
+        // vm.checkOff = function(item) { 
+            vm.checkOff = function(item){
+                if(item.isComplete === false){
+                    item.isComplete = true;
+                }
+                else if(item.isComplete === true){
+                    item.isComplete = false;
+                }
+                console.log(item.isComplete);
             }
-        } 
+
+
     })
 })();
