@@ -16,10 +16,17 @@
             vm.form = [];
         }
 
-        vm.deleteItem = function(item){ console.log(item);
+        //function to delete an item 
+        vm.deleteItem = function(item) { 
             var index = vm.data.indexOf(item);
             vm.data.splice(index, 1);
             }
-       
+        
+        vm.checkOff = function(item) { console.log(item);
+            //vm.check = false;  
+            if(vm.data === false) {
+                vm.data = true; 
+            }
+        } 
     })
 })();

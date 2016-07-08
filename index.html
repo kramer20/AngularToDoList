@@ -24,9 +24,8 @@
                 <!-- example of existing item (incomplete)-->
                 <li>
                     <article>
-                        <button class='check'></button>
-                        <p>{{toDo.item}}</p>
-                        
+                        <button ng-click="main.checkOff(toDo)" class='check'></button>
+                        <p>{{toDo.item}}</p>     
                         <button ng-click="main.deleteItem(toDo)" class='delete'>X</button>
                     </article>
                 </li>
