@@ -33,6 +33,14 @@
                 console.log(item.isComplete);
             }
 
+        //function to clear completed
+        vm.clearAll = function() {
+            var doneToDo = vm.data;
+            vm.data = [];
+            angular.forEach(doneToDo, function(item) {
+                if (!item.isComplete) vm.data.push(item);
+            })
+        }
 
     })
 })();
