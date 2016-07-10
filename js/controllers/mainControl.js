@@ -43,14 +43,12 @@
 
         //function for items left in todo
         vm.remaining = function() {
-            var isComplete = 0;
+            var amount = 0;
             angular.forEach(vm.data, function(item){
-                if (item.isComplete === true){
-                    isComplete++; 
-                    console.log(remaining);
-                };
-            });
-            // var left = item.length - isComplete;
+                amount += item.isComplete ? 0 :1;
+                });
+            
+            return amount;
         }
 
 
