@@ -51,6 +51,16 @@
             return amount;
         }
 
+        //function for viewing active todos in active box
+        vm.activeTab = function() {
+            angular.forEach(function(item){ 
+                if (item.isComplete===false) {
+                    
+                   
+                }
+
+            })
+        }
 
     })
 })();
