@@ -30,17 +30,29 @@
                 else if(item.isComplete === true){
                     item.isComplete = false;
                 }
-                console.log(item.isComplete);
             }
 
         //function to clear completed
         vm.clearAll = function() {
             var doneToDo = vm.data;
             vm.data = [];
-            angular.forEach(doneToDo, function(item) {
-                if (!item.isComplete) vm.data.push(item);
-            })
+                angular.forEach(doneToDo, function(item) {
+                    if (!item.isComplete) vm.data.push(item);
+                })
         }
+
+        //function for items left in todo
+        vm.remaining = function() {
+            var isComplete = 0;
+            angular.forEach(vm.data, function(item){
+                if (item.isComplete === true){
+                    isComplete++; 
+                    console.log(remaining);
+                };
+            });
+            // var left = item.length - isComplete;
+        }
+
 
     })
 })();
