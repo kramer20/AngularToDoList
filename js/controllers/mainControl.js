@@ -52,15 +52,11 @@
         }
 
         //function for viewing active todos in active box
-        vm.activeTab = function() {
-            angular.forEach(function(item){ 
-                if (item.isComplete===false) {
-                    
+        vm.activeTabItems = function activeTabItems(x) {
+            console.log(activeTabItems);
+            vm.activeTabItems = x;
                    
                 }
-
-            })
-        }
 
     })
 })();

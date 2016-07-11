@@ -1,39 +1,29 @@
-// 'use strict';
-
 // (function () {
-// angular.module('inventory').factory('API', function($http){
+// 	'use strict';
+// 	angular
+// 		.module('todos')
+// 		 .controller('MainController', function(API) {
 
-//     function getBlogs(){
-//         var ajaxRequest = $http({
-//           method: 'GET',
-//           headers:
-//           {
-//             X_CSRF_TOKEN: 'N5JGY3RWWTW51XZTYVSN',
-//           },
-//           url: 'https://tiyagencyweek.herokuapp.com/blogs'
-//           });
+// 		 	var vm = this;
 
-//         return ajaxRequest;
-//     }
+// 		 	getListItems();
 
-//     function saveBlog(formData){
-//         var ajaxRequest = $http({
-//           method: 'POST',
-//           data:formData,
-//           headers:
-//           {
-//             X_CSRF_TOKEN: 'N5JGY3RWWTW51XZTYVSN',
-//           },
-//           url: 'https://tiyagencyweek.herokuapp.com/blogs/create'
-//           });
+// 		 	function getListItems(){
+// 		 		var items = API.retrieveItems();
 
-//         return ajaxRequest;
-//     }
-	
+// 		 		blogs.then(function(results){
+// 		 			vm.items = resluts.data.items;
+// 		 		})
+// 		 	};
 
-//   	return {
-//     	getBlogs: getBlogs,
-//         saveBlog: saveBlog,
-//   	};
-// })
+// 		 	vm.submit = function(){
+// 		 		var submit = API.submit(vm.form);
+
+// 		 		submit.then(function(results){
+// 		 			console.log(results);
+// 		 			getListItems();
+// 		 		})
+// 		 	}
+
+// 		 });
 // })();
