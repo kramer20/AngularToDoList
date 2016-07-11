@@ -54,9 +54,8 @@
         //function for viewing active todos in active box
         vm.activeTabItems = function activeTabItems(x) {
             console.log(activeTabItems);
-            vm.activeTabItems = x;
-                   
-                }
-
+            vm.active = x;            
+       }
+ 
     })
 })();

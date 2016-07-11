@@ -25,7 +25,7 @@
                 <input type='text' class='new-todo' placeholder='What needs to be done?' ng-model='main.form.item'>
             </form>
 
-            <ul class='items' ng-repeat='toDo in main.data'>
+            <ul class='items' ng-repeat='toDo in main.data | filter: {isComplete:main.active}'>
                 <!-- example of existing item (incomplete)-->
                 <li>
                     <article ng-class="{completed: toDo.isComplete}">
