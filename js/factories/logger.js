@@ -1,29 +1,33 @@
-// (function () {
-// 	'use strict';
-// 	angular
-// 		.module('todos')
-// 		 .controller('MainController', function(API) {
+(function () {
+	'use strict';
+	angular
+		.module('todos')
+		 .factory('API', function() {
 
-// 		 	var vm = this;
+		 	var vm = this;
 
-// 		 	getListItems();
+		 	//set something to local storage
 
-// 		 	function getListItems(){
-// 		 		var items = API.retrieveItems();
+		 	function setStorage(data)
+		 	{
+		 		var data = JSON.stringify(data);
+		 		localStorage.setItem('data',data);
+		 	}
 
-// 		 		blogs.then(function(results){
-// 		 			vm.items = resluts.data.items;
-// 		 		})
-// 		 	};
+		 	//get something from local storage
 
-// 		 	vm.submit = function(){
-// 		 		var submit = API.submit(vm.form);
+		 	function getStorage()
+		 	{
+		 		var data = localStorage.getItem('data');
+		 		data = JSON.parse(data);
+		 		return data;
+		 		
+		 	}
+		 	
+		 	return {
+		 		setStorage,
+		 		getStorage		 
+		 		}
 
-// 		 		submit.then(function(results){
-// 		 			console.log(results);
-// 		 			getListItems();
-// 		 		})
-// 		 	}
-
-// 		 });
-// })();
+		 });
+})();
